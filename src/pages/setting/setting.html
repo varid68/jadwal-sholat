@@ -1,0 +1,81 @@
+<!--
+  Generated template for the SettingPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+	<img src="./assets/img/header.png" alt="header">
+  <ion-toolbar color="secondary">
+    <ion-buttons item-start>
+    	<button ion-button (tap)="back()">
+    		<ion-icon name="md-arrow-dropleft"></ion-icon>
+    	</button>
+    </ion-buttons>
+    <ion-title>Pengaturan</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding>
+
+	<ion-list text-capitalize>
+		<span>pengaturan notifikasi</span>
+		<ion-item>
+  		<ion-label>matikan notifikasi</ion-label>
+  		<ion-checkbox item-right></ion-checkbox>
+		</ion-item>
+		<div class="line"></div>
+		<ion-item>
+			<ion-label>getar notifikasi</ion-label>
+  		<ion-checkbox item-right></ion-checkbox>
+		</ion-item>
+		<div class="line"></div>
+		<ion-item tappable (tap)="openModal('nama')">
+			suara notifikasi
+		</ion-item>
+		<div class="line"></div>
+		<ion-item (tap)="openModal('volume')">
+			volume adzan
+		</ion-item>
+	</ion-list>
+
+	<ion-list text-capitalize>
+		<span>pengaturan bahasa</span>
+		<ion-item (tap)="openModal('bahasa')">
+			pemilihan bahasa
+		</ion-item>
+		<div class="line"></div>
+		<ion-item (tap)="openModal('nama')">
+			nama sholat
+		</ion-item>
+	</ion-list>
+
+	<ion-list text-capitalize>
+		<span>pengaturan tampilan</span>
+		<ion-item>
+			<ion-label>perlihatkan kutipan</ion-label>
+  		<ion-checkbox item-right></ion-checkbox>
+		</ion-item>
+	</ion-list>
+
+	<ion-list text-capitalize>
+		<span>pengaturan perhitungan</span>
+		<ion-item (tap)="openModal('metode')">
+			metode penghitungan sholat
+		</ion-item>
+		<div class="line"></div>
+		<ion-item (tap)="openModal('asar')">
+			penghitungan ashar
+		</ion-item>
+		<div class="line"></div>
+		<ion-item (tap)="toKoreksi()">
+			koreksi waktu manual
+		</ion-item>
+		<div class="line"></div>
+		<ion-item>
+			penyesuaian hijriah
+		</ion-item>
+	</ion-list>
+
+</ion-content>

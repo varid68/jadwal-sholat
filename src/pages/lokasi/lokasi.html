@@ -1,0 +1,41 @@
+<!--
+  Generated template for the LokasiPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-buttons item-start>
+    	<button ion-button (tap)="back()">
+    		<ion-icon name="md-arrow-dropleft"></ion-icon>
+    	</button>
+    </ion-buttons>
+    <ion-title>Lokasi tersimpan</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding>
+
+	<div *ngIf="kosong" id="kosong">Belum ada lokasi tersimpan</div>
+
+  <ion-card *ngFor="let item of city | async" (press)="openPopup($event,item)">
+    <ion-card-content>
+      <span id="desc">{{ item.desc }}</span><br>
+      <ion-list>
+        <ion-item>
+          <ion-label>Gunakan sebagai lokasi</ion-label>
+          <ion-checkbox (ionChange)="dismiss(item)"></ion-checkbox>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+	<ion-fab bottom right>
+    <button ion-fab color="secondary" (tap)="toCariPage()">
+      <ion-icon name="md-add"></ion-icon>
+    </button>
+  </ion-fab>
+
+</ion-content>

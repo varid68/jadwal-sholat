@@ -1,3 +1,110 @@
 page-home {
+	.scroll-content {
+		background-color: #f5f5f5;
+		
+		img.cover {
+			max-width: none; 
+			width: 102.5% !important; 
+		}
+
+		.city {
+			position: absolute;
+		  top: 5.5vh;
+		  font-size: 1.2em;
+		  width: 75%;
+		  color: #fff;
+		  text-align: left;
+		  padding-left: 65px;
+		  line-height: 18px;
+		  overflow: hidden;
+		  white-space: nowrap;
+		  text-overflow: ellipsis;				
+		}
+
+		.waktu-salat {
+			position: absolute;
+			top: 13vh;
+			font-size: 2.8em;
+			width: 100%;
+			font-weight: bold;
+			color: #fff;
+			padding-right: 15px;
+		}
+
+		.selisih {
+			position: absolute;
+			top: 24vh;
+			font-size: 1.1em;				
+			width: 100%;
+			color: #fff;
+			padding-right: 20px;
+		}
+
+		#ads {
+			margin-top: -75px;
+			position: relative;
+			height: 125px;
+		}
+	}
+
+	.card-md {
+		margin: 0;
+		width: 100%;
+		margin-bottom: 10px;
+
+		img {
+			width: 30px;
+			padding-top: 10px;
+			float: left;
+		}
+
+		.tanggal {
+			float: left;
+			color: rgba(0, 0, 0, 0.8);
+			padding-left: 20px;
+		}
+
+		.hari {
+			font-size: 1.8rem;
+			color: #000000;
+		}
+
+		.jam {
+			margin-top: 15px;
+
+			.ion-md-notifications {
+				font-size: 1.7rem;
+			}
+		}
+
+		.jam span {
+			color: black;
+			font-size: 1.7rem;
+			font-weight: 500;
+		}
+
+		.row:not(:last-child) {
+			border-bottom: 0.3px solid #eee;
+		}
+
+		ion-icon#more {
+			float: right;
+			margin-right: 20px;
+		}
+
+		.col {
+			text-align: left;
+		}
+
+		span#hadist {
+			display: block;
+			padding-top: 10px;
+		}
+
+		.kutipan {
+			color: #666;
+			font-size: 1.3rem !important;
+		}
+	}
 
 }

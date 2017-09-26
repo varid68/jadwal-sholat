@@ -1,6 +1,95 @@
 // http://ionicframework.com/docs/v2/theming/
+$roboto-font-path: $font-path !default;
+@font-face {
+	font-family:"Chinacat";
+	font-style:normal;
+	font-weight:normal;
+	src:local("chinrg__"), local("chinrg__"),	url("#{$roboto-font-path}/chinrg__.ttf") format("ttf"),	url("#{$roboto-font-path}/chinrg__.woff") format("woff"),	url("#{$roboto-font-path}/chinrg__.ttf") format("truetype");
+}
+
+.list-md .item-block .item-inner {
+  border-bottom: none; 
+}
+
+.image-menu {
+  margin-right: 20px;
+}
 
 
+// Transparent status bar and awesome tool bar style
+// --------------------------------------------------
+
+// Super bar placeholder
+// Work in tool bar with transparent status bar
+
+%super-bar {
+  .scroll-content {
+    margin-top: 0 !important;
+  }
+
+  ion-header, .toolbar-background {
+    background-color: initial !important;
+    transition: background-color 0.5s ease;
+    margin-top: 25px;
+
+    &:after {
+      height: 0  !important;
+    }
+  }
+
+  .opaque {
+    background-color: color($colors, secondary) !important;
+
+    &:after {
+      height: 5px !important;
+    }
+
+    .toolbar-background {
+      background-color: color($colors, secondary);
+    }
+  }
+}
+
+// Extend super bar placeholder for android
+
+.platform-android {
+  page-home, page-language-details {
+    @extend %super-bar;
+  }
+}
+
+.mask::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 100%;
+}
+
+.cover {
+  position: relative;
+  line-height: 0;
+  background: color($colors, secondary);
+  margin: -16px -16px 0 -16px;
+  text-align: center;
+
+  .header {
+    position: absolute;
+    top: $cordova-md-statusbar-padding;
+    left: 0.8rem;
+  }
+
+  img.cover {
+    width: 100%;
+    border: none;
+    vertical-align: middle;
+    margin-left: -16px;
+    margin-top: -16px;
+    width: 100%;
+    opacity: 0.3;
+  }
+}
 // App Global Sass
 // --------------------------------------------------
 // Put style rules here that you want to apply globally. These

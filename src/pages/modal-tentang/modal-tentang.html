@@ -1,0 +1,44 @@
+<!--
+  Generated template for the ModalTentangPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header drag>
+  <ion-navbar color="secondary">
+  	<ion-title>Tentang Aplikasi</ion-title>
+  	<ion-buttons right>
+  		<button ion-button icon-only (tap)="close()">
+  			<ion-icon name="close"></ion-icon>
+  		</button>
+  	</ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+    <div id="versi">
+      <img src="./assets/img/icon.png" alt="icon" float-left padding-right>
+      <span id="nama">Ayo Sholat</span><br>
+      <span>versi 1.0.0</span><br>
+      <div padding-top>dibuat oleh varid68@gmail.com</div>
+    </div>
+
+    <div id="api">
+      <h3>Waktu Sholat API</h3>
+      <span>Aplikasi ini menggunakan Application Progamming Interface (API) untuk menghitung waktu sholat yang tersedia di situs</span><br>
+      <a href="https://muslimsalat.com/api/">https://muslimsalat.com/api.</a>
+    </div>
+
+    <div id="tentang">
+      <h4>Bantuan</h4>
+      <span>
+        Aplikasi <strong>Ayo Sholat</strong> adalah aplikasi sederhana yang menampilkan waktu terbit matahari, waktu sholat subuh, dzuhur, ashar, maghrib dan isya' Yang mana semuanya dihitung menggunakan metode <strong>Egyptian General Authority of Survey.</strong>
+      </span><br><br>
+      <span>
+        Aplikasi ini akan menghitung waktu sholat di daerah anda dengan memanfaatkan <del> koordinat lintang dan busur yang diperoleh dari GPS perangkat anda atau dengan </del> nama daerah yang anda masukkan. Kemudian aplikasi akan mengecek dan menghitung waktunya berdasarkan posisi anda tersebut. Waktu yang ditampilkan dalam Format waktu 24 Jam
+      </span><br>
+      <span id="note">Inspired by Kodelokus Cipta Aplikasi</span>
+    </div>
+
+</ion-content>

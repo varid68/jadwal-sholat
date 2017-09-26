@@ -1,14 +1,224 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
+  <ion-navbar color="primary">
+  	<button ion-button menuToggle>
+  		<ion-icon name="menu"></ion-icon>
+  	</button>
+    <ion-buttons end>
+	    <button ion-button (tap)="toKompasPage()" icon-only>
+	    	<ion-icon name="md-compass"></ion-icon>
+	    </button>
+    </ion-buttons>
+    <ion-buttons end padding-left>
+	    <button ion-button (tap)="openPopup($event,'atas')" icon-only>
+	    	<ion-icon md="md-more"></ion-icon>
+	    </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+
+<ion-content padding parallax-header>
+	<div class="cover header-md">
+ 		<img class="cover" src="./assets/img/bg_home.png" alt="home">
+ 		<p class="city">{{ cityDesc }}</p>
+ 		<p class="waktu-salat">{{ waktuSalat }}</p>
+    <p class="selisih">{{ selisih?.value }}</p>
+ 	</div>
+	<ion-card id="ads"></ion-card>
+	<ion-card text-capitalize>
+		<ion-slides pager="true">
+  		<ion-slide>
+				<ion-card-content>
+			    <img src="assets/img/ic_calendar_time.png" alt="kalender">
+			    <span class="tanggal hari">hari ini / {{ hari }}</span><br>
+			    <span class="tanggal">{{ tanggal }} / {{ tanggalHijri }} H</span><br>
+
+			    <div class="jam">
+			    	<ion-grid>
+			    		<ion-row tappable (tap)="toNotifPage()">
+			    			<ion-col col-8>
+			    				<span class="Subuh">subuh</span>
+			    			</ion-col>
+			    			<ion-col col-3>
+			    				<span class="Subuh">{{ jadwal.Subuh }}</span>
+			    				<ion-spinner name="dots" [hidden]="!stillLoading"></ion-spinner><br>
+			    			</ion-col>
+			    			<ion-col col-1>
+			    				<ion-icon name="notifications"></ion-icon>
+			    			</ion-col>
+			    		</ion-row>
+
+			    		<ion-row tappable (tap)="toNotifPage()">
+			    			<ion-col col-8>
+			    				<span class="Terbit">terbit</span>
+			    			</ion-col>
+			    			<ion-col col-3>
+			    				<span class="Terbit">{{ jadwal.Terbit }}</span>
+			    				<ion-spinner name="dots" [hidden]="!stillLoading"></ion-spinner><br>
+			    			</ion-col>
+			    			<ion-col col-1>
+			    				<ion-icon name="notifications"></ion-icon>
+			    			</ion-col>
+			    		</ion-row>
+
+			    		<ion-row tappable (tap)="toNotifPage()">
+			    			<ion-col col-8>
+			    				<span class="Dzuhur">dzuhur</span>
+			    			</ion-col>
+			    			<ion-col col-3>
+			    				<span class="Dzuhur">{{ jadwal.Dzuhur }}</span>
+			    				<ion-spinner name="dots" [hidden]="!stillLoading"></ion-spinner><br>
+			    			</ion-col>
+			    			<ion-col col-1>
+			    				<ion-icon name="notifications"></ion-icon>
+			    			</ion-col>
+			    		</ion-row>
+
+			    		<ion-row tappable (tap)="toNotifPage()">
+			    			<ion-col col-8>
+			    				<span class="Ashar">ashar</span>
+			    			</ion-col>
+			    			<ion-col col-3>
+			    				<span class="Ashar">{{ jadwal.Ashar }}</span>
+			    				<ion-spinner name="dots" [hidden]="!stillLoading"></ion-spinner ><br>
+			    			</ion-col>
+			    			<ion-col col-1>
+			    				<ion-icon name="notifications"></ion-icon>
+			    			</ion-col>
+			    		</ion-row>
+
+			    		<ion-row tappable (tap)="toNotifPage()">
+			    			<ion-col col-8>
+			    				<span class="Maghrib">maghrib</span>
+			    			</ion-col>
+			    			<ion-col col-3>
+			    				<span class="Maghrib">{{ jadwal.Maghrib }}</span>
+			    				<ion-spinner name="dots" [hidden]="!stillLoading"></ion-spinner><br>
+			    			</ion-col>
+			    			<ion-col col-1>
+			    				<ion-icon name="notifications"></ion-icon>
+			    			</ion-col>
+			    		</ion-row>
+
+			    		<ion-row tappable (tap)="toNotifPage()">
+			    			<ion-col col-8>
+			    				<span class="Isya">isya</span>
+			    			</ion-col>
+			    			<ion-col col-3>
+			    				<span class="Isya">{{ jadwal.Isya }}</span>
+			    				<ion-spinner name="dots" [hidden]="!stillLoading"></ion-spinner><br>
+			    			</ion-col>
+			    			<ion-col col-1>
+			    				<ion-icon name="notifications"></ion-icon>
+			    			</ion-col>
+			    		</ion-row>
+			    	</ion-grid>
+			    </div>
+				</ion-card-content>
+			</ion-slide>
+			<ion-slide>
+				<ion-card-content>
+			    <img src="assets/img/ic_calendar_time.png">
+			    <span class="tanggal hari">besok / {{ besok }}</span><br>
+			    <span class="tanggal">{{ tanggalBesok }} / {{ tanggalHijriBesok }} H</span><br>
+
+			    <div class="jam">
+			    	<ion-grid>
+			    		<ion-row>
+			    			<ion-col col-8>
+			    				<span>subuh</span>
+			    			</ion-col>
+			    			<ion-col col-3>
+			    				<span>{{ jadwalBesok.subuh }}</span>
+			    				<ion-spinner name="dots" [hidden]="!stillLoading"></ion-spinner><br>
+			    			</ion-col>
+			    			<ion-col col-1>
+			    				<ion-icon name="notifications"></ion-icon>
+			    			</ion-col>
+			    		</ion-row>
+
+			    		<ion-row>
+			    			<ion-col col-8>
+			    				<span>terbit</span>
+			    			</ion-col>
+			    			<ion-col col-3>
+			    				<span>{{ jadwalBesok.terbit }}</span>
+			    				<ion-spinner name="dots" [hidden]="!stillLoading"></ion-spinner><br>
+			    			</ion-col>
+			    			<ion-col col-1>
+			    				<ion-icon name="notifications"></ion-icon>
+			    			</ion-col>
+			    		</ion-row>
+
+			    		<ion-row>
+			    			<ion-col col-8>
+			    				<span>dzuhur</span>
+			    			</ion-col>
+			    			<ion-col col-3>
+			    				<span>{{ jadwalBesok.dzuhur }}</span>
+			    				<ion-spinner name="dots" [hidden]="!stillLoading"></ion-spinner><br>
+			    			</ion-col>
+			    			<ion-col col-1>
+			    				<ion-icon name="notifications"></ion-icon>
+			    			</ion-col>
+			    		</ion-row>
+
+			    		<ion-row>
+			    			<ion-col col-8>
+			    				<span>ashar</span>
+			    			</ion-col>
+			    			<ion-col col-3>
+			    				<span>{{ jadwalBesok.ashar }}</span>
+			    				<ion-spinner name="dots" [hidden]="!stillLoading"></ion-spinner><br>
+			    			</ion-col>
+			    			<ion-col col-1>
+			    				<ion-icon name="notifications"></ion-icon>
+			    			</ion-col>
+			    		</ion-row>
+
+			    		<ion-row>
+			    			<ion-col col-8>
+			    				<span>maghrib</span>
+			    			</ion-col>
+			    			<ion-col col-3>
+			    				<span>{{ jadwalBesok.maghrib }}</span>
+			    				<ion-spinner name="dots" [hidden]="!stillLoading"></ion-spinner><br>
+			    			</ion-col>
+			    			<ion-col col-1>
+			    				<ion-icon name="notifications"></ion-icon>
+			    			</ion-col>
+			    		</ion-row>
+
+			    		<ion-row>
+			    			<ion-col col-8>
+			    				<span>isya</span>
+			    			</ion-col>
+			    			<ion-col col-3>
+			    				<span>{{ jadwalBesok.isya }}</span>
+			    				<ion-spinner name="dots" [hidden]="!stillLoading"></ion-spinner><br>
+			    			</ion-col>
+			    			<ion-col col-1>
+			    				<ion-icon name="notifications"></ion-icon>
+			    			</ion-col>
+			    		</ion-row>
+			    	</ion-grid>
+			    </div>
+				</ion-card-content>
+			</ion-slide>
+		</ion-slides>
+		<ion-item>
+  		<ion-label>matikan notifikasi</ion-label>
+  		<ion-checkbox></ion-checkbox>
+		</ion-item>
+	</ion-card>
+
+	<ion-card *ngIf="!hideIt">
+		<ion-card-content>
+			<span class="kutipan">#Kutipan</span>
+			<ion-icon name="ios-more" id="more" tappable (tap)="openPopup($event,'bawah')" item-right></ion-icon><br>
+			<span id="hadist">Jika Kamu tidak dapat menahan lelahnya belajar, | Maka kamu harus sanggup menahan perihnya Kebodohan."</span>
+			<div text-right padding-top class="kutipan">~Imam Syafi'i~</div>
+		</ion-card-content>
+	</ion-card>
+
 </ion-content>

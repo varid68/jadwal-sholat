@@ -1,0 +1,134 @@
+<!--
+  Generated template for the PopupModalPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-content padding text-capitalize>
+
+	<div [ngSwitch]="id">
+		<ion-list *ngSwitchCase="'volume'">
+			<span class="heading">volume adzan</span>
+		  <ion-item style="padding-top: 10px">
+		    <ion-label>sesuai volume alarm</ion-label>
+		    <ion-checkbox (ionChange)="dismiss()"></ion-checkbox>
+		  </ion-item>
+		  <ion-item>
+		    <ion-label>sesuai volume ringtone</ion-label>
+		    <ion-checkbox (ionChange)="dismiss()"></ion-checkbox>
+		  </ion-item>
+		  <ion-item>
+		    <ion-label>sesuai volume musik/media</ion-label>
+		    <ion-checkbox (ionChange)="dismiss()"></ion-checkbox>
+		  </ion-item>
+		  <ion-item>
+		  	<button ion-button clear (tap)="dismiss()" item-right>batal</button>
+		  </ion-item>
+		</ion-list>
+
+
+		<ion-list *ngSwitchCase="'bahasa'">
+			<span class="heading">pemilihan bahasa</span>
+		  <ion-item style="padding-top: 10px">
+		    <ion-label>English</ion-label>
+		    <ion-checkbox (ionChange)="dismiss()"></ion-checkbox>
+		  </ion-item>
+		  <ion-item>
+		    <ion-label>bahasa indonesia</ion-label>
+		    <ion-checkbox (ionChange)="dismiss()"></ion-checkbox>
+		  </ion-item>
+		  <ion-item>
+		    <ion-label>bahasa melayu</ion-label>
+		    <ion-checkbox (ionChange)="dismiss()"></ion-checkbox>
+		  </ion-item>
+		  <ion-item>
+		    <ion-label>Türkce</ion-label>
+		    <ion-checkbox (ionChange)="dismiss()"></ion-checkbox>
+		  </ion-item>
+		  <ion-item>
+		    <ion-label>祝贺</ion-label>
+		    <ion-checkbox (ionChange)="dismiss()"></ion-checkbox>
+		  </ion-item>
+		  <ion-item>
+		    <ion-label>индейка</ion-label>
+		    <ion-checkbox (ionChange)="dismiss()"></ion-checkbox>
+		  </ion-item>
+		  <ion-item>
+		  	<button ion-button clear (tap)="dismiss()" item-right>batal</button>
+		  </ion-item>
+		</ion-list>
+
+
+		<ion-list *ngSwitchCase="'nama'">
+			<span class="heading">nama sholat</span>
+		  <ion-item style="padding-top: 10px">
+		    <ion-label>otomatis</ion-label>
+		    <ion-checkbox (ionChange)="dismiss()"></ion-checkbox>
+		  </ion-item>
+		  <ion-item>
+		    <ion-label>indonesia</ion-label>
+		    <ion-checkbox (ionChange)="dismiss()"></ion-checkbox>
+		  </ion-item>
+		  <ion-item>
+		    <ion-label>malaysia</ion-label>
+		    <ion-checkbox (ionChange)="dismiss()"></ion-checkbox>
+		  </ion-item>
+		  <ion-item>
+		    <ion-label>العربية</ion-label>
+		    <ion-checkbox (ionChange)="dismiss()"></ion-checkbox>
+		  </ion-item>
+		  <ion-item>
+		  	<button ion-button clear (tap)="dismiss()" item-right>batal</button>
+		  </ion-item>
+		</ion-list>
+
+
+		<ion-list *ngSwitchCase="'metode'" class="wrap-text">
+			<span class="heading">pilih metode</span>
+		  <ion-item style="padding-top: 10px">
+		    <ion-label>Lorem ipsum dolor sit amet, consectetur adipisicing</ion-label>
+		    <ion-checkbox (ionChange)="dismiss()"></ion-checkbox>
+		  </ion-item>
+		  <ion-item>
+		    <ion-label>elit, sed do eiusmod	tempor incididunt ut labore et dolore</ion-label>
+		    <ion-checkbox (ionChange)="dismiss()"></ion-checkbox>
+		  </ion-item>
+		  <ion-item>
+		    <ion-label>magna aliqua. Ut enim ad minim veniam nostrud exercitation ullamco</ion-label>
+		    <ion-checkbox (ionChange)="dismiss()"></ion-checkbox>
+		  </ion-item>
+		  <ion-item>
+		    <ion-label>laboris nisi ut aliquip ex ea commodo</ion-label>
+		    <ion-checkbox (ionChange)="dismiss()"></ion-checkbox>
+		  </ion-item>
+		  <ion-item>
+		    <ion-label>in reprehenderit in voluptate velit esse	cillum dolore eu fugiat</ion-label>
+		    <ion-checkbox (ionChange)="dismiss()"></ion-checkbox>
+		  </ion-item>
+		  <ion-item>
+		    <ion-label>qui officia deserunt mollit anim id est laborum.</ion-label>
+		    <ion-checkbox (ionChange)="dismiss()"></ion-checkbox>
+		  </ion-item>
+		  <ion-item>
+		  	<button ion-button clear (tap)="dismiss()" item-right>batal</button>
+		  </ion-item>
+		</ion-list>
+
+
+		<ion-list *ngSwitchDefault class="wrap-text">
+			<span class="heading">pilih metode</span>
+		  <ion-item style="padding-top: 10px">
+		    <ion-label>standar(shafii, maliki, hanbali)</ion-label>
+		    <ion-checkbox (ionChange)="dismiss()"></ion-checkbox>
+		  </ion-item>
+		  <ion-item>
+		    <ion-label>hanafi</ion-label>
+		    <ion-checkbox (ionChange)="dismiss()"></ion-checkbox>
+		  </ion-item>
+		  <ion-item>
+		  	<button ion-button clear (tap)="dismiss()" item-right>batal</button>
+		  </ion-item>
+		</ion-list>
+	</div>
+
+</ion-content>

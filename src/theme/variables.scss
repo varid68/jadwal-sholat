@@ -25,10 +25,11 @@ $font-path: "../assets/fonts";
 
 $colors: (
   primary:    #488aff,
-  secondary:  #32db64,
+  secondary:  #009688,
   danger:     #f53d3d,
   light:      #f4f4f4,
-  dark:       #222
+  dark:       #222,
+  teal:				#4CAF50
 );
 
 
@@ -42,9 +43,22 @@ $colors: (
 // App Material Design Variables
 // --------------------------------------------------
 // Material Design only Sass variables can go here
+$content-md-padding: 10px;
 
+$font-family-md-base: "Chinacat", "Roboto", "Helvetica Neue", sans-serif;
 
+$popover-md-width: 55%;
 
+$alert-md-head-padding-top:	14px;	
+$alert-md-head-padding-end:	24px;
+$alert-md-head-padding-bottom: 14px;	
+$alert-md-head-padding-start:	14px;
+
+$alert-md-message-padding-end:	14px;
+$alert-md-message-padding-bottom: 0;	
+$alert-md-message-padding-start: 14px;
+
+$checkbox-md-item-start-margin-end: 16px;
 
 // App Windows Variables
 // --------------------------------------------------

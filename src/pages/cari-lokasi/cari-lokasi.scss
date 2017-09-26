@@ -1,0 +1,23 @@
+page-cari-lokasi {
+	img {
+		margin-bottom: -3px;
+	}
+	.bar-button-md {
+		float: left;
+		font-size: 3.4rem;
+	}
+
+	.title-md {
+		line-height: 1.6;
+	}
+
+	.scroll-content {
+		ion-input {
+			border-bottom: 1px solid purple;
+		}
+
+		ion-label {
+			white-space: normal;
+		}
+	}
+}

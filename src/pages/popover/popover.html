@@ -1,0 +1,35 @@
+<!--
+  Generated template for the PopoverPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<div [ngSwitch]="posisiPopup">
+	<div *ngSwitchCase="'atas'">
+		<ion-list style="margin-bottom: 0">
+			<ion-item tappable (tap)="openModalTentang()">
+				Tentang Aplikasi
+			</ion-item>
+			<ion-item tappable (tap)="openModalLokasi()">
+				Lokasi manual
+			</ion-item>
+			<ion-item tappable (tap)="presentAlert('rating')">
+				Beri app ini 5 bintang
+			</ion-item>
+			<ion-item tappable (tap)="toPage()">
+				Pengaturan
+			</ion-item>
+			<ion-item tappable (tap)="presentAlert('iklan')">
+				Hilangkan iklan
+			</ion-item>
+		</ion-list>
+	</div>
+	<div *ngSwitchDefault>
+		<ion-list style="margin-bottom: 0">
+			<ion-item tappable (tap)="hideIt()">
+				Sembunyikan
+			</ion-item>
+		</ion-list>
+	</div>
+</div>
+

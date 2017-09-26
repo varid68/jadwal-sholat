@@ -1,0 +1,42 @@
+page-notif {
+	img {
+		margin-bottom: -3px;
+	}
+	.toolbar-md {
+		padding-bottom: 0;
+	}
+	.bar-button-md {
+		float: left;
+		font-size: 3.4rem;
+	}
+
+	.title-md {
+		line-height: 1.6;
+	}
+
+	.scroll-content {
+		.item-md {
+			width: 80%;
+			float: left;
+			border-bottom: 0.3px solid #eee;
+		}
+
+		#select {
+			.item-md {
+				width: 100%;
+				padding-left: 0;
+				border-bottom: 0;
+			}
+
+			.select-md {
+				width: 95%;
+			}
+
+			ion-select {
+				max-width: 95%;
+			}
+		}
+
+	}
+
+}
