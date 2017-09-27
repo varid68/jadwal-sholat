@@ -26,10 +26,6 @@ Aplikasi ini akan menghitung waktu sholat di daerah anda dengan memanfaatkan <de
       * kemudian buka localhost:8100
 
 
- ## App preview
- <img src="https://firebasestorage.googleapis.com/v0/b/ionic2-1afad.appspot.com/o/terbit.gif?alt=media&token=3a37ecc8-7cb1-4e75-bb46-8c6b17bdcdfa" alt="Preview" height=480>
-
-
  ## Download apk
 
 <a href="https://drive.google.com/open?id=0Bxp6Hpy2uQydMFlsbTFxTjlMc3c">Downlaod from Google drive</a>
